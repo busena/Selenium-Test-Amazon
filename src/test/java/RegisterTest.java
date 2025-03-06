@@ -6,10 +6,10 @@ public class RegisterTest extends BaseTest {
 
     RegisterPage registerPage = new RegisterPage();
 
-     @Test
-    public void registerAccount(){
-         registerPage.clickCreateAccount();
-         registerPage.createAccount();
-         registerPage.createClick();
-     }
+    @Test
+    public void registerAccount() {
+        registerPage.clickCreateAccount()
+                .createAccount()
+                .createClick();
+    }
 }
