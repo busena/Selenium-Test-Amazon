@@ -1,5 +1,6 @@
 package Base;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -11,7 +12,8 @@ public class BaseTest extends BaseLibrary{
         driver = new ChromeDriver();
         driver.get("https://www.amazon.com.tr/");
         driver.manage().window().maximize();
-        driver.findElement(By.id("ap_email")).click();
+        sleep(1000);
+        driver.findElement(By.id("nav-link-accountList")).click();
     }
 
     @AfterMethod
