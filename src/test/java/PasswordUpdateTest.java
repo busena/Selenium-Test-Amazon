@@ -3,7 +3,7 @@ import Pages.LoginPage;
 import Pages.PasswordUpdatePage;
 import org.testng.annotations.Test;
 
-public class passwordUpdateTest extends BaseTest {
+public class PasswordUpdateTest extends BaseTest {
 
     LoginPage loginPage = new LoginPage();
     PasswordUpdatePage passwordUpdatePage = new PasswordUpdatePage();

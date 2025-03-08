@@ -13,30 +13,9 @@ public class ProductListPage extends BaseTest {
         return this;
     }
 
-    public ProductListPage clickProduct() {
-        driver.findElement(By.cssSelector("[class='sg-col-4-of-24 sg-col-4-of-12 s-result-item s-asin sg-col-4-of-16 sg-col s-widget-spacing-small sg-col-4-of-20']"))
-                .click();
-        return this;
-    }
-
-    public ProductListPage addProductBasket() {
-        driver.findElement(By.cssSelector("[class='a-button a-spacing-small a-button-primary a-button-icon']")).click();
-        return this;
-    }
-
     public ProductListPage goToBasket() {
-        driver.findElement(By.id("sw-gtc")).click();
-        sleep(1000);
+        driver.findElement(By.cssSelector("[class='nav-a nav-a-2 nav-progressive-attribute']")).click();
         return this;
     }
 
-    public ProductListPage correctProduct() {
-        WebElement productNameIs = driver.findElement(By.cssSelector("[class='a-link-normal sc-product-link sc-product-title aok-block']"));
-        String actualName = productNameIs.getText();
-        System.out.println(actualName);
-
-        Assert.assertTrue(productName.equalsIgnoreCase(actualName), "Ürün Sepette Ekli Değil!");
-        System.out.println("Ürün Sepete Eklidir!");
-        return this;
-    }
 }

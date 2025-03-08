@@ -1,25 +1,25 @@
 import Base.BaseTest;
 import Pages.LoginPage;
+import Pages.ProductAddPage;
 import Pages.ProductListPage;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
 
-public class SearchProductTest extends BaseTest {
+public class AddProductTest extends BaseTest {
 
     LoginPage loginPage = new LoginPage();
     ProductListPage productListPage = new ProductListPage();
+    ProductAddPage productAddPage = new ProductAddPage();
 
     @Test
-    public void clickProduct() {
-
+    public void addProduct() {
         loginPage.fillEmail(email)
                 .clickContinueButton()
                 .fillPassword(password)
                 .clickLoginButton();
 
-        productListPage.searchProduct()
-                .clickProduct()
+        productListPage.searchProduct();
+
+        productAddPage.clickProduct()
                 .addProductBasket()
                 .goToBasket()
                 .correctProduct();
