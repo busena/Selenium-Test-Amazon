@@ -8,6 +8,7 @@ public class RegisterTest extends BaseTest {
 
     @Test
     public void registerAccount() {
+
         registerPage.clickCreateAccount()
                 .createAccount()
                 .createClick();

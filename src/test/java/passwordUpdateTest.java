@@ -10,6 +10,7 @@ public class passwordUpdateTest extends BaseTest {
 
     @Test
     public void navigateToAccount() {
+
         loginPage.fillEmail(email)
                 .clickContinueButton()
                 .fillPassword(password)
