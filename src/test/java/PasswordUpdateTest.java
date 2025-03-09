@@ -8,7 +8,7 @@ public class PasswordUpdateTest extends BaseTest {
     PasswordUpdatePage passwordUpdatePage = new PasswordUpdatePage();
 
     @Test
-    public void navigateToAccount() {
+    public void passwordUpdate() {
         loginPage.fillEmail(email)
                 .clickContinueButton()
                 .fillPassword(password)

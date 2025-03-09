@@ -9,4 +9,5 @@ public class Data {
     public String onCardName = "Ella Purnell";
     public String invalidCharacters = "*/*/+-*/";
     public Integer indexOfList = 5;
+    public String couponName = "SEPETTE20";
 }
