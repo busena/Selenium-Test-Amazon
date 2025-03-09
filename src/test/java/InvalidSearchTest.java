@@ -1,26 +1,19 @@
 import Base.BaseTest;
 import Pages.LoginPage;
-import Pages.ProductAddPage;
 import Pages.ProductListPage;
 import org.testng.annotations.Test;
 
-public class AddProductTest extends BaseTest {
+public class InvalidSearchTest extends BaseTest {
     LoginPage loginPage = new LoginPage();
     ProductListPage productListPage = new ProductListPage();
-    ProductAddPage productAddPage = new ProductAddPage();
 
     @Test
-    public void addProduct() {
+    public void searchInvalidCharacters() {
         loginPage.fillEmail(email)
                 .clickContinueButton()
                 .fillPassword(password)
                 .clickLoginButton();
 
-        productListPage.searchProductName();
-
-        productAddPage.clickProduct()
-                .addProductBasket()
-                .goToBasket()
-                .correctProduct();
+        productListPage.searchInvalidName();
     }
 }

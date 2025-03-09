@@ -13,7 +13,7 @@ public class PasswordUpdatePage extends BaseTest {
         return this;
     }
 
-    public PasswordUpdatePage goToLoginSettings(){
+    public PasswordUpdatePage goToLoginSettings() {
         List<WebElement> accountSettingsLists = driver.findElements(By.cssSelector("[class='a-unordered-list a-nostyle a-vertical ya-card-row']"));
         WebElement AccountSettings = accountSettingsLists.get(0);
         List<WebElement> innerElements = AccountSettings.findElements(By.cssSelector("[class='ya-card-cell']"));
@@ -29,7 +29,7 @@ public class PasswordUpdatePage extends BaseTest {
         return this;
     }
 
-    public PasswordUpdatePage updatePassword(){
+    public PasswordUpdatePage updatePassword() {
         List<WebElement> passwordInputList = driver.findElements(By.cssSelector("[class='a-input-text']"));
 
         for (WebElement passwordInput : passwordInputList) {

@@ -8,8 +8,13 @@ import org.testng.Assert;
 
 public class ProductListPage extends BaseTest {
 
-    public ProductListPage searchProduct() {
+    public ProductListPage searchProductName() {
         driver.findElement(By.cssSelector("[class='nav-input nav-progressive-attribute']")).sendKeys(productName, Keys.ENTER);
+        return this;
+    }
+
+    public ProductListPage searchInvalidName() {
+        driver.findElement(By.cssSelector("[class='nav-input nav-progressive-attribute']")).sendKeys(invalidCharacters, Keys.ENTER);
         return this;
     }
 

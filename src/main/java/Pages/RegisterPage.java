@@ -11,7 +11,7 @@ public class RegisterPage extends BaseTest {
         return this;
     }
 
-    public RegisterPage createAccount(){
+    public RegisterPage createAccount() {
         driver.findElement(By.name("customerName")).sendKeys("Buse");
         driver.findElement(By.name("email")).sendKeys(email);
         driver.findElement(By.name("password")).sendKeys("Test123,");

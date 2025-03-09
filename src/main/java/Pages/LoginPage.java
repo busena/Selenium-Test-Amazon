@@ -1,10 +1,10 @@
 package Pages;
+
 import Base.BaseTest;
 import org.openqa.selenium.By;
 
 public class LoginPage extends BaseTest {
-
-    public LoginPage fillEmail(String email){
+    public LoginPage fillEmail(String email) {
         driver.findElement(By.id("ap_email")).sendKeys(email);
         return this;
     }
@@ -14,7 +14,7 @@ public class LoginPage extends BaseTest {
         return this;
     }
 
-    public LoginPage fillPassword(String password){
+    public LoginPage fillPassword(String password) {
         driver.findElement(By.name("password")).sendKeys(password);
         return this;
     }

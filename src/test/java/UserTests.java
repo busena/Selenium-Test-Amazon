@@ -4,12 +4,10 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class UserTests extends BaseTest {
-
     LoginPage loginPage = new LoginPage();
 
     @Test
     public void loginSuccessful() {
-
         loginPage.fillEmail(email)
                 .clickContinueButton()
                 .fillPassword(password)

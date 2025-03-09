@@ -1,16 +1,17 @@
 import Base.BaseTest;
 import Pages.LoginPage;
-import Pages.ProductDeletePage;
+import Pages.PaymentPage;
 import Pages.ProductListPage;
 import org.testng.annotations.Test;
 
-public class ProductDeleteTest extends BaseTest {
+
+public class PaymentTest extends BaseTest {
     LoginPage loginPage = new LoginPage();
     ProductListPage productListPage = new ProductListPage();
-    ProductDeletePage productDeletePage = new ProductDeletePage();
+    PaymentPage paymentPage = new PaymentPage();
 
     @Test
-    public void deleteProduct() {
+    public void goToPayment() {
         loginPage.fillEmail(email)
                 .clickContinueButton()
                 .fillPassword(password)
@@ -18,6 +19,12 @@ public class ProductDeleteTest extends BaseTest {
 
         productListPage.goToBasket();
 
-        productDeletePage.clickDeleteButton();
+        paymentPage.goToPaymentPage()
+                .clickAddCart()
+                .switchFrame()
+                .addCartInfo()
+                .chooseDate()
+                .clickAddButton()
+                .addCart();
     }
 }

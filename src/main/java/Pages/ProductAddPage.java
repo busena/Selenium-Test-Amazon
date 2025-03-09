@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 public class ProductAddPage extends BaseTest {
+
     public ProductAddPage clickProduct() {
         driver.findElement(By.cssSelector("[class='sg-col-4-of-24 sg-col-4-of-12 s-result-item s-asin sg-col-4-of-16 sg-col s-widget-spacing-small sg-col-4-of-20']"))
                 .click();
